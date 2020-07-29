@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  height: MyString
+  category: MyString
+  color: MyString
+  flower_number: 1
+  water: false
+  easy_kill: 1
+  scientific_name: MyString
+  garden: one
+
+two:
+  height: MyString
+  category: MyString
+  color: MyString
+  flower_number: 1
+  water: false
+  easy_kill: 1
+  scientific_name: MyString
+  garden: two

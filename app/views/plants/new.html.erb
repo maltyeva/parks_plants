@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>Add a plant! 🌴</h1>
+      <!-- POST gardens/2/plants -->
+      <%= simple_form_for [@garden, @plant] do |f| %>
+        <%= f.input :scientific_name %>
+        <%= f.input :height %>
+        <%= f.input :flower_number %>
+        <%= f.input :easy_kill, label: "How easy is this plant to kill or keep alive?" %>
+        <%= f.input :category, collection: Plant::CATEGORIES %>
+        <%= f.input :water, label: "Check if the plant needs to be watered" %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

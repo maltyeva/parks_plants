@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.banner_url %>);">
+  <div class="container">
+    <h1><%= @garden.name %></h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <ul>
+      <% @garden.plants.each do |plant| %>
+        <li><%= plant.scientific_name %> - is this tall: <%= plant.height %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %> | 
+<%= link_to "add a plant!", new_garden_plant_path(@garden)  %>

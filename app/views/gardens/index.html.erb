@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1572085313466-6710de8d7ba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80);">
+  <div class="container">
+    <h1>My Garden App!</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row py-4">
+    <% @gardens.each do |garden| %>
+      <div class="col-xs-12 col-sm-6">
+        <%= link_to garden_path(garden) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= garden.banner_url %>)">
+            <%= garden.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'New Garden', new_garden_path %>
